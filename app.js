@@ -66,6 +66,19 @@ console.log(nome); // João
 console.log(idade); // 25
 
 
+var pessoa = {
+    nome: "João",
+    idade: 25,
+};
+
+var { x, y } = pessoa;
+
+console.log(pessoa)
+console.log(x); // undefined
+console.log(y); // undefined
+
+
+
 var vetor = [1, 2, 3];
 
 var [a, b] = vetor;
@@ -124,4 +137,47 @@ var { nome: x, idade: y, ...outros } = objeto;
 console.log(objeto)
 console.log(x); // nome -> João
 console.log(y); // idade -> 25
+console.log(outros); // { cidade: "São Paulo" }
+
+
+var objeto = {
+    nome: "João",
+    idade: 25,
+    cidade: "São Paulo",
+};
+
+var { idade: y, nome: x, ...outros } = objeto;
+
+console.log(objeto)
+console.log(x); // nome -> João
+console.log(y); // idade -> 25
+console.log(outros); // { cidade: "São Paulo" }
+
+
+var objeto = {
+    nome: "João",
+    idade: 25,
+    cidade: "São Paulo",
+};
+
+var { y, x, ...outros } = objeto;
+
+console.log(objeto)
+console.log(x); // x -> undefined
+console.log(y); // y -> undefined
+console.log(outros); // { cidade: "São Paulo" }
+
+
+
+var objeto = {
+    nome: "João",
+    idade: 25,
+    cidade: "São Paulo",
+};
+
+var { x, y, ...outros } = objeto;
+
+console.log(objeto)
+console.log(x); // x -> undefined
+console.log(y); // y -> undefined
 console.log(outros); // { cidade: "São Paulo" }
